@@ -1,0 +1,31 @@
+{
+    "tasks": [
+        {
+            "type": "cppbuild",
+            "label": "test",
+            "command": "/usr/bin/gcc",
+            "args": [
+                "-g",
+                "-fdiagnostics-color=always",               
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}",
+                "${file}",
+                "-L/home/pi/robot",
+                "-lrobot",
+                "-lwiringPi"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "调试器生成的任务。"
+        }
+    ],
+    "version": "2.0.0"
+}
