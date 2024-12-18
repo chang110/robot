@@ -8,5 +8,5 @@
 #define DEFAULT_RANGE           256
 #define DEFAULT_DUTY            128
 #define DEFAULT_SETP_SIZE       8
-
+#define MUC_FREQ                19200000
 #endif // !__CONFIG_H__

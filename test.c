@@ -18,8 +18,12 @@ int main(int argc, char *argv[])
         printf("motor_ctl_init failed\n");
         return -1;
     }
-    enable_motor(0);
-
+    sleep(10);
+    enable_motor(0,FREQ_UNCOUNTER);
+    enable_motor(2,FREQ_UNCOUNTER);
+    enable_motor(3,1000);
+    motor_ctl_set_speed(1000);
+    printf("freq: %f hz\n",motor_ctl_get_speed());
     while (stop_signal)
     {
         sleep(1);

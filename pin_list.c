@@ -1,6 +1,7 @@
  #include <stddef.h>
  #include <malloc.h>
 #include "pin_list.h"
+#include "config.h"
 
 pin_list* add_pin(pin_list **list, unsigned int pin)
 {
@@ -17,6 +18,7 @@ pin_list* create_pin(unsigned int pin)
     if (new_pin == NULL) return NULL;
     new_pin->state = 1;
     new_pin->pin = pin;
+    new_pin->step = FREQ_UNCOUNTER;
     new_pin->next = NULL;
     return new_pin;
 }
